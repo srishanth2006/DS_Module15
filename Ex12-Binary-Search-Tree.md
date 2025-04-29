@@ -34,19 +34,25 @@ struct node* insert(struct node* node, int key)
 {
 if(node==NULL)
 {
-struct node* node=(struct node*)malloc(sizeof(struct node)); node->key=key;
-node->left=NULL; node->right=NULL; returnnode;
+struct node* node=(struct node*)malloc(sizeof(struct node));
+node->key=key;
+node->left=NULL;
+ node->right=NULL;
+ returnnode;
 }
 else
 {
-struct node* cur; if(key<=node->key)
+struct node* cur;
+ if(key<=node->key)
 {
-cur=insert(node->left,key); node->left=cur;
+cur=insert(node->left,key);
+ node->left=cur;
 }
  
 else
 {
-cur=insert(node->right,key); node->right=cur;
+cur=insert(node->right,key);
+ node->right=cur;
 }
 returnnode;
 }
