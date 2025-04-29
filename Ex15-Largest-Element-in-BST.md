@@ -38,7 +38,9 @@ void inorder(struct node *root)
 {
 if(root != NULL)
 {
-inorder(root->left); printf(" %d ",root->info); inorder(root->right);
+inorder(root->left);
+printf(" %d ",root->info);
+ inorder(root->right);
 }
 }
 void largest(struct node *root)
