@@ -25,20 +25,27 @@ Program to construct an Expression Tree for the given Postfix Expression and dis
 Developed by: HARITHA RAMESH
 RegisterNumber:  212223100011
 */
-struct n { char d; struct n*l; struct n*r;
+struct n {
+ char d;
+ struct n*l;
+struct n*r;
 };*/
 voidpreOrder(struct n*tree)
 {
 if(tree)
 {
-printf("%c",tree->d); preOrder(tree->l); preOrder(tree->r);
+printf("%c",tree->d);
+ preOrder(tree->l);
+ preOrder(tree->r);
 }
 }
 void inOrder(struct n*tree)
 {
 if(tree)
 {
-inOrder(tree->l); printf("%c",tree->d); inOrder(tree->r);
+inOrder(tree->l);
+ printf("%c",tree->d);
+ inOrder(tree->r);
 }
 }
 voidpostOrder(struct n*tree)
@@ -46,7 +53,9 @@ voidpostOrder(struct n*tree)
 {
 if(tree)
 {
-postOrder(tree->l); postOrder(tree->r); printf("%c",tree->d);
+postOrder(tree->l);
+ postOrder(tree->r);
+ printf("%c",tree->d);
 }
 }
 
