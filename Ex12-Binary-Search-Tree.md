@@ -24,8 +24,8 @@ To write a C function to insert the elements in the binary search tree
 ```
 /*
 Program to insert the elements in the binary search tree
-Developed by: HARITHA RAMESH
-RegisterNumber:  212223100011
+Developed by: SRISHANTH J
+RegisterNumber:  212223240160
 */
 structnode{ int key;
 struct node*left, *right;
